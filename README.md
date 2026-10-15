@@ -1,6 +1,10 @@
 # MitoSpectra holding site
 
-Private review source for the MitoSpectra website under construction page.
+Source for the published MitoSpectra website under construction page.
+
+## Live site
+
+https://mitospectra.github.io/mitospectra-site/
 
 ## Local preview
 
@@ -24,4 +28,4 @@ The mark is a byte-for-byte copy of the current canonical monochrome brand asset
 
 ## Publication status
 
-This repository is private. GitHub Pages is not configured. The page must not be published or connected to a domain without Jules's explicit approval.
+GitHub Pages is published at the live site URL above. No custom domain is configured.
