@@ -11,6 +11,7 @@ const requiredCopy = [
   "MitoSpectra is an early stage research platform exploring quality controlled optical measurement, signal processing and provenance rich data for mitochondrial spectroscopy research.",
   "Shared platform methods are being developed across optics, acquisition, calibration and data quality. Interpretation and validation remain specific to each research setting.",
   "Research and development stage. Operated by a registered New Zealand sole trader · NZBN 9429054031869 · Trade mark application in progress.",
+  "© 2026 MitoSpectra. All rights reserved.",
   "Aotearoa New Zealand",
   "Private draft"
 ];
