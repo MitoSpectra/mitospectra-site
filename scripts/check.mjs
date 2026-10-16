@@ -20,12 +20,12 @@ const normalizedHtml = html.replace(/\s+/g, " ");
 const failures = [];
 
 try {
-  await access(new URL("../assets/mitospectra-mark-white.png", import.meta.url));
+  await access(new URL("../assets/mitospectra-mark-colour.png", import.meta.url));
 } catch {
   failures.push("Missing canonical MitoSpectra mark asset");
 }
 
-if (!html.includes('src="assets/mitospectra-mark-white.png"')) {
+if (!html.includes('src="assets/mitospectra-mark-colour.png"')) {
   failures.push("Page does not reference the canonical MitoSpectra mark");
 }
 
