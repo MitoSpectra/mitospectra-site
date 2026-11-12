@@ -10,7 +10,7 @@ const requiredCopy = [
   "Website under construction",
   "MitoSpectra is a non-invasive optical sensing technology, designed to monitor mitochondrial function and metabolic health in real time. Its applications span organ transplantation, critical care, human health and wellness, and plant monitoring, providing actionable insights into cellular metabolism, physiological stress and biological resilience across sectors.",
   "Research and development stage. Operated by a registered New Zealand sole trader · NZBN 9429054031869 · Trade mark protected.",
-  "shinning light on what matters",
+  "shining light on what matters",
   "Dr. Jules Devaux",
   "© 2026 MitoSpectra. All rights reserved.",
   "Aotearoa New Zealand",
@@ -21,12 +21,12 @@ const normalizedHtml = html.replace(/\s+/g, " ");
 const failures = [];
 
 try {
-  await access(new URL("../assets/mitospectra-tm-transparent.png", import.meta.url));
+  await access(new URL("../assets/mitospectra-tm-colour.png", import.meta.url));
 } catch {
   failures.push("Missing trademarked MitoSpectra mark asset");
 }
 
-if (!html.includes('src="assets/mitospectra-tm-transparent.png"')) {
+if (!html.includes('src="assets/mitospectra-tm-colour.png"')) {
   failures.push("Page does not reference the trademarked MitoSpectra mark");
 }
 
@@ -44,6 +44,7 @@ const prohibitedPatterns = [
   [/®/, "registered mark symbol"],
   [/Business registration and trade mark application are in progress/i, "stale registration wording"],
   [/Shared platform methods are being developed across optics/i, "removed shared platform copy"],
+  [/shinning light on what matters/i, "misspelled tagline"],
   [/clinically approved/i, "clinical approval claim"],
   [/diagnos(?:e|is|tic)/i, "diagnostic claim"],
   [/available (?:now|today|for sale)/i, "product availability claim"],

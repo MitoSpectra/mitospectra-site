@@ -152,17 +152,35 @@ h1 {
   width: 100%;
   height: auto;
   opacity: 0.9;
-  filter: brightness(1.55) contrast(1.05)
-    drop-shadow(0 0 2.5rem rgba(91, 216, 239, 0.12));
+  filter: drop-shadow(0 0 2.5rem rgba(91, 216, 239, 0.18));
+}
+
+.trademark-symbol {
+  position: absolute;
+  z-index: 1;
+  top: 54%;
+  left: 2%;
+  color: #d6fbff;
+  font-size: clamp(0.78rem, 0.55rem + 0.55vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-shadow:
+    0 0 0.45rem rgba(91, 216, 239, 0.9),
+    0 0 1rem rgba(91, 216, 239, 0.55);
 }
 
 .brand-lockup figcaption {
-  margin-top: 0.35rem;
-  color: var(--cyan);
-  font-size: clamp(0.75rem, 0.68rem + 0.25vw, 0.98rem);
+  margin-top: clamp(0.55rem, 0.7vw, 0.9rem);
+  color: #d6fbff;
+  font-size: clamp(1.05rem, 0.84rem + 0.58vw, 1.48rem);
   font-style: italic;
-  letter-spacing: 0.08em;
+  font-weight: 650;
+  letter-spacing: 0.1em;
   text-transform: lowercase;
+  text-shadow:
+    0 0 0.45rem rgba(91, 216, 239, 0.95),
+    0 0 1.1rem rgba(91, 216, 239, 0.65),
+    0 0 2.25rem rgba(91, 216, 239, 0.35);
 }
 
 footer {
@@ -188,6 +206,20 @@ footer {
 
   .brand-mark {
     opacity: 0.24;
+  }
+
+  .trademark-symbol {
+    top: 1.3rem;
+    left: 5rem;
+  }
+
+  .brand-lockup figcaption {
+    position: absolute;
+    top: 5rem;
+    right: 13rem;
+    margin: 0;
+    font-size: clamp(0.86rem, 3.4vw, 1.05rem);
+    white-space: nowrap;
   }
 }
 
