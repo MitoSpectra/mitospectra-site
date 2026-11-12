@@ -5,7 +5,6 @@ const css = await readFile(new URL("../styles.css", import.meta.url), "utf8");
 const robots = await readFile(new URL("../robots.txt", import.meta.url), "utf8");
 
 const requiredCopy = [
-  "Research platform in development",
   "MitoSpectra",
   "Website under construction",
   "MitoSpectra is a non-invasive optical sensing technology, designed to monitor mitochondrial function and metabolic health in real time. Its applications span organ transplantation, critical care, human health and wellness, and plant monitoring, providing actionable insights into cellular metabolism, physiological stress and biological resilience across sectors.",

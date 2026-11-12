@@ -56,7 +56,6 @@ body {
   width: min(100%, 49rem);
 }
 
-.eyebrow,
 .hero__status,
 .stage-note,
 footer {
@@ -64,20 +63,25 @@ footer {
   text-transform: uppercase;
 }
 
-.eyebrow {
-  margin: 0 0 clamp(1.75rem, 4vw, 3.5rem);
-  color: var(--green);
-  font-size: clamp(0.7rem, 0.66rem + 0.2vw, 0.82rem);
-  font-weight: 650;
-}
-
 h1 {
+  position: relative;
   max-width: 10ch;
   margin: 0;
   font-size: clamp(4rem, 11vw, 9.5rem);
   font-weight: 580;
   letter-spacing: -0.075em;
   line-height: 0.86;
+}
+
+.heading-trademark {
+  position: absolute;
+  top: -0.18em;
+  left: 0.04em;
+  color: var(--green);
+  font-size: 0.16em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 0.6rem rgba(117, 226, 180, 0.35);
 }
 
 .hero__status {
@@ -155,20 +159,6 @@ h1 {
   filter: drop-shadow(0 0 2.5rem rgba(91, 216, 239, 0.18));
 }
 
-.trademark-symbol {
-  position: absolute;
-  z-index: 1;
-  top: 54%;
-  left: 2%;
-  color: #d6fbff;
-  font-size: clamp(0.78rem, 0.55rem + 0.55vw, 1.25rem);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-shadow:
-    0 0 0.45rem rgba(91, 216, 239, 0.9),
-    0 0 1rem rgba(91, 216, 239, 0.55);
-}
-
 .brand-lockup figcaption {
   margin-top: clamp(0.55rem, 0.7vw, 0.9rem);
   color: #d6fbff;
@@ -206,11 +196,6 @@ footer {
 
   .brand-mark {
     opacity: 0.24;
-  }
-
-  .trademark-symbol {
-    top: 1.3rem;
-    left: 5rem;
   }
 
   .brand-lockup figcaption {
