@@ -110,6 +110,23 @@ h1 {
   margin: 0;
 }
 
+.founder {
+  margin: 1.15rem 0 0;
+  color: var(--muted);
+  font-size: clamp(0.86rem, 0.8rem + 0.22vw, 1rem);
+}
+
+.founder a {
+  color: var(--ink);
+  text-decoration-color: var(--cyan);
+  text-underline-offset: 0.2em;
+}
+
+.founder a:hover,
+.founder a:focus-visible {
+  color: var(--cyan);
+}
+
 .stage-note {
   max-width: 44rem;
   margin-top: clamp(2rem, 4vw, 3.25rem);
@@ -120,15 +137,32 @@ h1 {
   line-height: 1.65;
 }
 
-.brand-mark {
+.brand-lockup {
   position: absolute;
   top: 50%;
   right: clamp(-14rem, -5vw, -2rem);
   width: clamp(28rem, 47vw, 47rem);
-  height: auto;
+  margin: 0;
+  text-align: center;
   translate: 0 -50%;
-  opacity: 0.72;
-  filter: drop-shadow(0 0 2.5rem rgba(91, 216, 239, 0.12));
+}
+
+.brand-mark {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+  filter: brightness(1.55) contrast(1.05)
+    drop-shadow(0 0 2.5rem rgba(91, 216, 239, 0.12));
+}
+
+.brand-lockup figcaption {
+  margin-top: 0.35rem;
+  color: var(--cyan);
+  font-size: clamp(0.75rem, 0.68rem + 0.25vw, 0.98rem);
+  font-style: italic;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
 }
 
 footer {
@@ -146,10 +180,13 @@ footer {
 }
 
 @media (max-width: 54rem) {
-  .brand-mark {
+  .brand-lockup {
     top: 24%;
     right: -13rem;
     width: 34rem;
+  }
+
+  .brand-mark {
     opacity: 0.24;
   }
 }

@@ -8,9 +8,10 @@ const requiredCopy = [
   "Research platform in development",
   "MitoSpectra",
   "Website under construction",
-  "MitoSpectra is an early stage research platform exploring quality controlled optical measurement, signal processing and provenance rich data for mitochondrial spectroscopy research.",
-  "Shared platform methods are being developed across optics, acquisition, calibration and data quality. Interpretation and validation remain specific to each research setting.",
-  "Research and development stage. Operated by a registered New Zealand sole trader · NZBN 9429054031869 · Trade mark application in progress.",
+  "MitoSpectra is a non-invasive optical sensing technology, designed to monitor mitochondrial function and metabolic health in real time. Its applications span organ transplantation, critical care, human health and wellness, and plant monitoring, providing actionable insights into cellular metabolism, physiological stress and biological resilience across sectors.",
+  "Research and development stage. Operated by a registered New Zealand sole trader · NZBN 9429054031869 · Trade mark protected.",
+  "shinning light on what matters",
+  "Dr. Jules Devaux",
   "© 2026 MitoSpectra. All rights reserved.",
   "Aotearoa New Zealand",
   "Private draft"
@@ -20,13 +21,17 @@ const normalizedHtml = html.replace(/\s+/g, " ");
 const failures = [];
 
 try {
-  await access(new URL("../assets/mitospectra-mark-colour.png", import.meta.url));
+  await access(new URL("../assets/mitospectra-tm-transparent.png", import.meta.url));
 } catch {
-  failures.push("Missing canonical MitoSpectra mark asset");
+  failures.push("Missing trademarked MitoSpectra mark asset");
 }
 
-if (!html.includes('src="assets/mitospectra-mark-colour.png"')) {
-  failures.push("Page does not reference the canonical MitoSpectra mark");
+if (!html.includes('src="assets/mitospectra-tm-transparent.png"')) {
+  failures.push("Page does not reference the trademarked MitoSpectra mark");
+}
+
+if (!html.includes('href="https://profiles.auckland.ac.nz/jules-devaux"')) {
+  failures.push("Missing Dr. Jules Devaux UoA profile link");
 }
 
 for (const text of requiredCopy) {
@@ -38,6 +43,7 @@ const prohibitedPatterns = [
   [/<script\b/i, "script element"],
   [/®/, "registered mark symbol"],
   [/Business registration and trade mark application are in progress/i, "stale registration wording"],
+  [/Shared platform methods are being developed across optics/i, "removed shared platform copy"],
   [/clinically approved/i, "clinical approval claim"],
   [/diagnos(?:e|is|tic)/i, "diagnostic claim"],
   [/available (?:now|today|for sale)/i, "product availability claim"],
